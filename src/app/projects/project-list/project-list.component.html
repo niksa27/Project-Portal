@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-xs-25">
+    <!-- Listener for button New Project -->
+    <button class="btn btn-success" (click)="onNewProject()">New Project</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-25">
+    <!--Iterate all projects and display it -->
+ <!-- Parent to child communniction pro and index need to defined in the child part-->
+    <app-project-item
+      *ngFor="let proEl of pro; let i = index"
+      [pro]="proEl"
+      [index]="i"></app-project-item>
+  </div>
+</div>
+

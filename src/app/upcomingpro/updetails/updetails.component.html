@@ -1,0 +1,110 @@
+<!-- Panel which displys on right side when we select the project-->
+<!--
+<div class="row">
+  <div class="col-xs-12">
+    <img
+      [src]="pro.imagePath"
+      alt="{{ pro.name }}"
+      class="img-responsive"
+      style="max-height: 300px;">
+  </div>
+</div>
+-->
+<style>
+    #h1{border:0.5px solid black;
+        padding: 20px 40px;
+        width:700px;}
+    </style> 
+<br>
+<br>
+<br>
+<br>
+<div id="h1">
+<div class="row">
+  <div class="col-xs-12">
+      <h4>
+          Project name: 
+         <b>{{ pro.name }}</b>
+      </h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+      <h4>
+          Project domain : 
+         <b>{{ pro.domain }}</b>
+      </h4>
+  </div>
+</div>
+
+<!--
+<div class="row">
+  <div class="col-xs-12">
+    <div
+      class="btn-group"
+      appDropdown>
+      
+      <button
+        type="button"
+        class="btn btn-primary dropdown-toggle">
+        Manage Project <span class="caret"></span>
+      </button>
+
+      <ul class="dropdown-menu">
+        <li><a (click)="onAddToShoppingList()" style="cursor: pointer;">Add To Prerequisite List</a></li>
+        <li><a style="cursor: pointer;" (click)="onEditProject()">Edit Project</a></li>
+        <li><a style="cursor: pointer;" (click)="onDeleteProject()">Delete Project</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+-->
+<div class="row">
+  <div class="col-xs-12">
+      <h4>
+          Project description:
+        </h4>
+        <h4><b> {{ pro.description }}</b></h4>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-12">
+      <h4>Github Link : </h4>
+      <h4> <a href="{{ pro.github }}">    {{ pro.github }} </a></h4>
+
+
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <h4>Linkdin Link :</h4>
+        <h4><a href="{{ pro.linkdin}}">    {{ pro.linkdin }} </a></h4>
+  
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+      <h4><b>{{ pro.member }}</b></h4>
+
+  </div>
+</div>
+<!--
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let Book of pro.Books">
+        {{ Book.name }} - {{ Book.amount }}
+      </li>
+    </ul>
+  </div>
+</div>
+-->
+
+</div>

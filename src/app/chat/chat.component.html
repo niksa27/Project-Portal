@@ -1,0 +1,31 @@
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+
+<h1 class="heading"> ONLINE DISCUSSION PORTAL </h1>
+  
+  <button (click)="signInWithGoogle()" *ngIf="!name" type="button" class="btn btn-danger">
+  <i  aria-hidden="true"></i> Login With Google </button>
+ 
+  <button (click)="logout()" *ngIf="name" ype="button" class="btn btn-danger"> Sign Out </button>
+<br>
+<br>
+<div class="grid-container">
+  <input required type="text" id="message" *ngIf="name" placeholder="Type here..." (keyup.enter)="chatSend(msg)" [(ngModel)]="msg">
+<!--
+  <li *ngIf="name" class="dropdown" class="signout" appSignout>
+      <a style="cursor: pointer;" class="dropdown-toggle" role="button"> {{name}} <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a style="cursor: pointer;">Sign Out</a></li>
+      </ul>
+    </li>
+  -->
+  <br>
+  <br>
+  <div class="list-group" *ngFor="let item of items | async">
+    
+      <a> {{item.name}} </a> 
+      
+      <p class="list-group-item">{{item.msg}}</p>
+        <div class="showtime"> {{item.dateTime | date:'medium'}} </div> <br>
+    
+  </div>
+</div>
